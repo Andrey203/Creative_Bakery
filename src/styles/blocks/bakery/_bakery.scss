@@ -1,0 +1,78 @@
+.bakery {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.product-cards {
+  display: grid;
+  gap: 40px;
+
+  @media (min-width: $screenWidth) {
+    & {
+      gap: 135px;
+    }
+
+    & :nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__title {
+    color: #e39a3b;
+
+    @media (min-width: $screenWidth) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $screenWidth) {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__description-wrapper {
+    margin-bottom: -14px;
+    max-width: 302px;
+  }
+
+  &__price {
+    @include size(65px, 65px);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: #f1cc9d;
+  }
+
+  &__img-block {
+    text-align: center;
+    margin: auto;
+  }
+
+  &__img {
+    @include size(200px, 300px);
+    object-fit: contain;
+
+    @media (min-width: $screenWidth) {
+      & {
+        @include size(auto, 80%);
+      }
+    }
+
+    @media (min-width: 1200px) {
+      & {
+        @include size(514px, 700px);
+      }
+    }
+  }
+
+  &__btn-all {
+    @include size(40px, 160px);
+    display: block;
+    margin: 0 auto;
+  }
+}

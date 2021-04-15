@@ -4,10 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <body class="page">
+    <header class="header">
+
+      <div class="burger-menu-wrapper">
+        <div class="burger-menu"></div>
+        <div class="burger-menu-line"></div>
+        <div class="burger-menu-close"></div>
+        <div class="burger-menu-close-line"></div>
+      </div>
+
+      <div class="header__content">
+        <div class="header-carousel">
+          <div class="header-carousel__switch">
+            <div class="header-carousel__arrow-prev"></div>
+            <ul class="header-carousel__switch-list">
+              <li class="header-carousel__switch-item header-carousel__switch-item--active">01</li>
+              <li class="header-carousel__switch-item">02</li>
+              <li class="header-carousel__switch-item">03</li>
+            </ul>
+            <div class="header-carousel__arrow-next"></div>
+          </div>
+          <div class="header-carousel__gallery">
+            <ul class="header-carousel__list">
+              <li class="header-carousel__item header-carousel__item--active"></li>
+              <li class="header-carousel__item"></li>
+              <li class="header-carousel__item"></li>
+            </ul>
+          </div>
+        </div>
+        <h1 class="header__title">Creative bakery</h1>
+        <h4 class="header__content-text">
+          We bake your fantasies: croissants<br>
+          cakes, cookies, and cupcakes.
+        </h4>
+        <button class="header__btn-more primary-btn">Learn more</button>
+      </div>
+
+      <aside class="header__sidebar">
+        <div class="header__nav-wrapper">
+          <nav class="nav">
+            <div class="logo">
+              <a href="#" class="logo__link">
+                <div class="logo__icon-first-part">
+                  <div class="logo__icon-second-part"></div>
+                </div>
+                <div class="logo__text">Bakerlab</div>
+              </a>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Bakery</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Bakershops</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">About</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contacts</a>
+              </li>
+            </ul>
+            <div class="nav__call-menu">
+              <a
+                href="tel:+38 066 336 36 36"
+                class="nav__phone-number"
+              >
+                +38 066 336 36 36
+              </a>
+              <button class="nav__call-btn">Call back</button>
+              <select
+                name="lang"
+                id="lang"
+                class="nav__lang"
+              >
+                <option value="En" class="nav__lang-item">En</option>
+                <option value="Ru" class="nav__lang-item">Ru</option>
+                <option value="Uk" class="nav__lang-item">Uk</option>
+              </select>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+    </header>
+    <section class="bakery page__container">
+      <h2 class="section-title">Bakery</h2>
+
+      <div class="product-cards">
+
+        <div class="product-cards__item">
+          <div class="product-cards__description-wrapper">
+            <h3 class="product-cards__title">Cookies</h3>
+            <h4 class="product-cards__name">Chocolate mix</h4>
+            <p class="product-cards__description">
+              Oatmeal cookies with golden raisins, orange zest and chocolate chips.
+            </p>
+            <div class="product-cards__price">
+              <strong>$ 4<br>
+                100 g
+              </strong>
+            </div>
+          </div>
+          <div class="product-cards__img-block">
+            <img
+              src="images/products/cookies.png"
+              alt="Chocolate mix image"
+              class="product-cards__img"
+            >
+          </div>
+        </div>
+
+        <div class="product-cards__item">
+          <div class="product-cards__description-wrapper">
+            <h3 class="product-cards__title">Cakes</h3>
+            <h4 class="product-cards__name">Mint coffee mocca</h4>
+            <p class="product-cards__description">
+              Chocolate biscuit coffee cake topped with a mint buttercream and powder.
+            </p>
+            <div class="product-cards__price">
+              <strong>$ 5<br>
+                100 g
+              </strong>
+            </div>
+          </div>
+          <div class="product-cards__img-block">
+            <img
+              src="images/products/cakes.png"
+              alt="Mint coffee mocca image"
+              class="product-cards__img"
+            >
+          </div>
+        </div>
+
+        <div class="product-cards__item">
+          <div class="product-cards__description-wrapper">
+            <h3 class="product-cards__title">Croissants</h3>
+            <h4 class="product-cards__name">Almond classic</h4>
+            <p class="product-cards__description">
+              Light multi-layered croissant strewn with cinammon and almond “petals”.
+            </p>
+            <div class="product-cards__price">
+              <strong>$ 0.5<br>
+                3
+              </strong>
+            </div>
+          </div>
+          <div class="product-cards__img-block">
+            <img
+              src="images/products/croissants.png"
+              alt="Almond classic image"
+              class="product-cards__img"
+            >
+          </div>
+        </div>
+
+        <div class="product-cards__item">
+          <div class="product-cards__description-wrapper">
+            <h3 class="product-cards__title">Cupcakes</h3>
+            <h4 class="product-cards__name">Triple creamy</h4>
+            <p class="product-cards__description">
+              Chocolate salted caramel, Vanilla frutti pebbles and Chocolate chip cupcakes.
+            </p>
+            <div class="product-cards__price">
+              <strong>$ 6.5<br>
+                3
+              </strong>
+            </div>
+          </div>
+          <div class="product-cards__img-block">
+            <img
+              src="images/products/cupcakes.png"
+              alt="Triple creamy image"
+              class="product-cards__img"
+            >
+          </div>
+        </div>
+
+        <button class="product-cards__btn-all primary-btn">All bakeries</button>
+      </div>
+
+    </section>
+    <section class="bakershops"></section>
+    <section class="about"></section>
+    <section class="contacts"></section>
+    <footer class="footer"></footer>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

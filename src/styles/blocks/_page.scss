@@ -1,0 +1,24 @@
+.page__container {
+  padding: 0 16px;
+
+  @media (min-width: $screenWidth) {
+    padding: 0 59px;
+  }
+
+  @media (min-width: 1600px) {
+    padding: 0 calc((100vw - 1482px) / 2);
+  }
+}
+
+.section-title {
+  font-family: "Cookie", cursive;
+  font-size: 60px;
+  line-height: 67px;
+  text-align: center;
+  color: #e39a3b;
+
+  @media (min-width: $screenWidth) {
+    font-size: 120px;
+    line-height: 133px;
+  }
+}

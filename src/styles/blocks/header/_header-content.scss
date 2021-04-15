@@ -1,0 +1,65 @@
+.header__content {
+  position: relative;
+  @include size(100%, 100%);
+  padding: 15px 16px 26px;
+  background-image: url("../images/header/bake-cream-puff-cup-1775045.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $screenWidth) {
+    @include size(100%, calc(59px + $screenContentWidth * 0.7));
+    padding: 34px 0 0 59px;
+  }
+
+  @media (min-width: 1600px) {
+    @include size(100%, calc(59px + $largeScreenContentWidth * 0.7));
+    padding: 34px 0 0 rubberPadding(1600px);
+  }
+}
+
+.header__title {
+  margin: 0;
+  margin-top: 26vh;
+  font-family: "Cookie", cursive;
+  font-size: 100px;
+  line-height: 80px;
+
+  @media (min-width: $screenWidth) {
+    margin-top: 16vh;
+    font-size: 160px;
+    line-height: 177px;
+  }
+}
+
+.header__content-text {
+  margin: 29px 0 19px;
+
+  @media (min-width: $screenWidth) {
+    margin: 20px 0 25px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 39px;
+  }
+}
+
+.header__btn-more {
+  position: relative;
+  @include size(45px, 160px);
+  z-index: 1;
+  // outline: none;
+  // border: none;
+  // cursor: pointer;
+  // border-radius: 40px;
+  // background-color: #e39a3b;
+
+  // &:hover {
+  //   background-color: #fff;
+  //   border: 2px solid #e39a3b;
+  // }
+
+  // &:active {
+  //   opacity: 0.8;
+  //   background-color: #e39a3b;
+  // }
+}

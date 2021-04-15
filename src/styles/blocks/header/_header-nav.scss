@@ -1,0 +1,120 @@
+.header__nav-wrapper {
+  height: 100%;
+}
+
+.nav {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+  padding-top: 52px;
+
+  @media (min-width: $screenWidth) {
+    & {
+      height: 87px;
+      display: flex;
+      position: fixed;
+      left: 59px;
+      right: 59px;
+      top: 34px;
+      justify-content: space-between;
+      padding-top: 0;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    left: rubberPadding(1600px);
+    right: rubberPadding(1600px);
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    @media (min-width: $screenWidth) {
+      & {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        align-items: center;
+        justify-items: center;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #412d22;
+
+    &:hover {
+      text-decoration: underline 1.5px;
+    }
+  }
+
+  &__call-menu {
+    display: grid;
+    gap: 30px;
+
+    @media (min-width: $screenWidth) {
+      & {
+        grid-template-columns: repeat(3, auto);
+        align-items: center;
+        gap: 10px;
+        justify-items: end;
+      }
+    }
+
+    @media (min-width: $screenWidth) and (max-width: 920px) {
+      & {
+        grid-template-columns: initial;
+      }
+    }
+
+    @media (min-width: 920px) and (max-width: 1200px) {
+      & {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-auto-flow: column;
+        justify-items: end;
+        align-items: center;
+        row-gap: 5px;
+      }
+    }
+  }
+
+  &__phone-number {
+    text-decoration: none;
+    color: #412d22;
+  }
+
+  &__call-btn {
+    @include size(30px, 100px);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background-color: #f1cc9d;
+
+    &:hover {
+      border: 2px solid #f1cc9d;
+      background-color: #fff;
+    }
+
+    &:active {
+      opacity: 0.8;
+      background-color: #f1cc9d;
+    }
+  }
+
+  &__lang {
+    width: 45px;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    background-color: #e39a3b00;
+    outline: none;
+    border: none;
+  }
+}

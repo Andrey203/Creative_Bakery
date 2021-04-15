@@ -1,0 +1,104 @@
+.header-carousel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+
+  &__arrow-prev {
+    @include size(20px, 12px);
+    background-image: url("../images/icons/arrow-left.svg");
+
+    @media (min-width: $screenWidth) {
+      & {
+        @include size(15px, 26px);
+        background-image: url("../images/icons/arrow-up.svg");
+      }
+    }
+  }
+
+  &__arrow-next {
+    @include size(20px, 12px);
+    background-image: url("../images/icons/arrow-right.svg");
+
+    @media (min-width: $screenWidth) {
+      & {
+        @include size(15px, 26px);
+        background-image: url("../images/icons/arrow-down.svg");
+      }
+    }
+  }
+
+  &__switch {
+    position: absolute;
+    left: calc(50% - 179px / 2);
+    bottom: 26px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+
+    &-item {
+      line-height: 19px;
+      color: #e39a3b;
+    }
+
+    &-item--active {
+      font-size: 40px;
+      line-height: 47px;
+      color: #412d22;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    @media (min-width: $screenWidth) {
+      & {
+        width: 187px;
+        left: calc(59px + #{$screenContentWidth} - 187px);
+        right: auto;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        grid-template-columns: auto;
+        justify-items: end;
+      }
+
+      &-item {
+        font-size: 40px;
+        line-height: 47px;
+        color: #f1cc9d;
+      }
+
+      &-item--active {
+        font-size: 176px;
+        line-height: 209px;
+        color: #412d22;
+      }
+
+      &-list {
+        grid-template-columns: auto;
+        justify-items: end;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      & {
+        left: calc(#{rubberPadding(1600px)}
+        + #{$largeScreenContentWidth} - 187px - 46px);
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+}

@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  display: flex;
+  @include size(100vh, 100vw);
+}
+
+.burger-menu-wrapper {
+  @include size(18px, 24px);
+  overflow: hidden;
+  position: fixed;
+  top: 33px;
+  right: 16px;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  @media (min-width: $screenWidth) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.burger-menu {
+  @include size(18px, 24px);
+  border-top: 1.5px solid #412d22;
+  border-bottom: 1.5px solid #412d22;
+  transform: translate(0);
+  transition: 0.6s ease-in-out;
+
+  &-line {
+    position: absolute;
+    top: 1.5px;
+    content: "";
+    height: 8px;
+    width: 24px;
+    border-bottom: 1.5px solid #412d22;
+    transform: translate(0);
+    transition: 0.6s ease-in-out ;
+  }
+
+  &-close {
+    position: absolute;
+    top: 50%;
+    @include size(18px, 24px);
+    border-top: 1.5px solid #412d22;
+    transform-origin: top;
+    transform: rotate(45deg) translate(30px);
+    transition: 0.6s ease-in-out;
+
+    &-line {
+      position: absolute;
+      content: "";
+      top: 9px;
+      width: 24px;
+      border-bottom: 1.5px solid #412d22;
+      transform: rotate(-45deg) translate(30px);
+      transition: 0.6s ease-in-out 0.6s;
+    }
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 16px;
+
+  @media (min-width: $screenWidth) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #412d22;
+  }
+
+  &__icon-first-part {
+    @include size(30px, 30px);
+    background-image: url("../images/icons/cookie-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  
+    @media (min-width: $screenWidth) {
+      & {
+        @include size(41px, 41px);
+      }
+    }
+  }
+
+  &__icon-second-part {
+    @include size(100%, 100%);
+    background-image: url("../images/icons/cookie-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__text {
+    position: relative;
+    top: -12px;
+    left: 21px;
+    font-family: "Cookie", cursive;
+    font-size: 23px;
+    line-height: 26px;
+
+    @media (min-width: $screenWidth) {
+      top: -16px;
+      left: 29px;
+      font-size: 30px;
+      line-height: 33px;
+    }
+  }
+}
