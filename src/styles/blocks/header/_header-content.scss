@@ -8,12 +8,12 @@
   background-position: center;
 
   @media (min-width: $screenWidth) {
-    @include size(100%, calc(59px + $screenContentWidth * 0.7));
+    @include size(100%, calc(59px + #{$screenContentWidth} * 0.7));
     padding: 34px 0 0 59px;
   }
 
   @media (min-width: 1600px) {
-    @include size(100%, calc(59px + $largeScreenContentWidth * 0.7));
+    @include size(100%, calc(59px + #{$largeScreenContentWidth} * 0.7));
     padding: 34px 0 0 rubberPadding(1600px);
   }
 }
@@ -47,19 +47,4 @@
   position: relative;
   @include size(45px, 160px);
   z-index: 1;
-  // outline: none;
-  // border: none;
-  // cursor: pointer;
-  // border-radius: 40px;
-  // background-color: #e39a3b;
-
-  // &:hover {
-  //   background-color: #fff;
-  //   border: 2px solid #e39a3b;
-  // }
-
-  // &:active {
-  //   opacity: 0.8;
-  //   background-color: #e39a3b;
-  // }
 }

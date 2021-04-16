@@ -8,13 +8,17 @@
   transition: 0.3s ease-in-out;
 
   @media (min-width: $screenWidth) {
-    position: static;
-    @include size(100%, calc(59px + $screenContentWidth * 0.3));
-    padding: 34px 59px 0 0;
+    & {
+      position: static;
+      @include size(100%, calc(59px + #{$screenContentWidth} * 0.3));
+      padding: 34px 59px 0 0;
+    }
   }
 
   @media (min-width: 1600px) {
-    @include size(100%, calc(59px + $screenContentWidth * 0.3));
-    padding: 34px rubberPadding(1600px) 0 0;
+    & {
+      @include size(100%, calc(59px + #{$screenContentWidth} * 0.3));
+      padding: 34px rubberPadding(1600px) 0 0;
+    }
   }
 }
