@@ -1,5 +1,6 @@
 $c-gray: #eee;
 $screenWidth: 770px;
 $iPadWidth: 540px;
+$iPhoneContentWidth: calc(100vw - 32px);
 $screenContentWidth: calc(100vw - 118px);
 $largeScreenContentWidth: calc(100vw - #{rubberPadding(1600px)} * 2);

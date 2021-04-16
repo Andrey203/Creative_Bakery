@@ -1,7 +1,7 @@
 .header {
   position: relative;
   display: flex;
-  @include size(100vh, 100vw);
+  height: 100vh;
 }
 
 .burger-menu-wrapper {
@@ -77,25 +77,11 @@
   }
 
   &__icon-first-part {
-    @include size(30px, 30px);
-    background-image: url("../images/icons/cookie-1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  
-    @media (min-width: $screenWidth) {
-      & {
-        @include size(41px, 41px);
-      }
-    }
+    @extend %cookieFirstPart;
   }
 
   &__icon-second-part {
-    @include size(100%, 100%);
-    background-image: url("../images/icons/cookie-2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    @extend %cookieSecondPart;
   }
 
   &__text {

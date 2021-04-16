@@ -75,8 +75,7 @@
             <div class="nav__call-menu">
               <a
                 href="tel:+38 066 336 36 36"
-                class="nav__phone-number"
-              >
+                class="nav__phone-number">
                 +38 066 336 36 36
               </a>
               <button class="nav__call-btn">Call back</button>
@@ -192,7 +191,141 @@
       </div>
 
     </section>
-    <section class="bakershops"></section>
+    <section class="bakershops page__container">
+      <h2 class="bakershops__title section-title">Bakershops</h2>
+      <form
+        action="#"
+        method="GET"
+        class="bakershops__form"
+      >
+        <select
+          name="bakershop-city"
+          id="bakershop-city"
+          class="bakershops__select"
+        >
+          <option
+            value=""
+            hidden
+            disabled
+            selected
+          >
+            City
+          </option>
+          <option value="">Lutsk</option>
+          <option value="">Lviv</option>
+          <option value="">Vinnytsya</option>
+          <option value="">Zhytomyr</option>
+          <option value="">Kherson</option>
+          <option value="">Poltava</option>
+          <option value="">Dnipro</option>
+          <option value="">Kharkiv</option>
+          <option value="">Chernihiv</option>
+          <option value="">Kyiv</option>
+        </select>
+        <select
+          name="bakershop-address"
+          id="bakershop-address"
+          class="bakershops__select"
+        >
+          <option
+            value=""
+            hidden
+            disabled
+            selected
+          >
+            Address
+          </option>
+          <option value="">www.com</option>
+        </select>
+        <input
+          type="submit"
+          class="bakershops__submit-btn primary-btn"
+          value="Search"
+        >
+      </form>
+
+      <div class="bakershops__map">
+        <div class="map-marks bakershops__mark-1">
+          <div class="map-marks__num">6</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Lviv</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-2">
+          <div class="map-marks__num">4</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Lutsk</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-3">
+          <div class="map-marks__num">3</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Zhytomyr</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-4">
+          <div class="map-marks__num">4</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Vinnytsya</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-5">
+          <div class="map-marks__num">9</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Kyiv</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-6">
+          <div class="map-marks__num">4</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Chernihiv</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-7">
+          <div class="map-marks__num">2</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Poltava</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-8">
+          <div class="map-marks__num">5</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Kharkiv</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-9">
+          <div class="map-marks__num">4</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Dnipro</div>
+        </div>
+
+        <div class="map-marks bakershops__mark-10">
+          <div class="map-marks__num">2</div>
+          <div class="map-marks__cookie-first-p">
+            <div class="map-marks__cookie-second-p"></div>
+          </div>
+          <div class="map-marks__city">Kherson</div>
+        </div>
+      </div>
+    </section>
     <section class="about"></section>
     <section class="contacts"></section>
     <footer class="footer"></footer>

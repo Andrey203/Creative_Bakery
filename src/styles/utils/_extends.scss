@@ -42,3 +42,25 @@
     background-color: #e39a3b;
   }
 }
+
+%cookieFirstPart {
+  @include size(30px, 30px);
+  background-image: url("../images/icons/cookie-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (min-width: $screenWidth) {
+    & {
+      @include size(41px, 41px);
+    }
+  }
+}
+
+%cookieSecondPart {
+  @include size(100%, 100%);
+  background-image: url("../images/icons/cookie-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
