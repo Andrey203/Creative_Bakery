@@ -1,9 +1,22 @@
 .map-marks {
   position: relative;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.4);
+  }
 
   &__city {
     position: absolute;
-    bottom: -110%;
+    font-size: 8px;
+    line-height: 12px;
+    bottom: -25%;
+
+    @media (min-width: $screenWidth) {
+      font-size: 16px;
+      line-height: 24px;
+      bottom: -80%;
+    }
   }
 
   &__cookie-first-p {
@@ -31,6 +44,10 @@
   padding-top: 40px;
   padding-bottom: 31px;
   background-color: #f1cc9d;
+
+  &__link {
+    color: #412d22;
+  }
 
   &__title {
     margin: 0;
@@ -90,6 +107,13 @@
     border: none;
     border-radius: 50%;
     background-color: #fff;
+    cursor: pointer;
+    transition: 0.3 ease-in-out;
+
+    &:active {
+      box-shadow: inset 0 0 12px #a8d230;
+      transform: scale(1.1);
+    }
   }
 
   &__map {
@@ -122,63 +146,84 @@
 
   &__mark {
     &-1 {
-      transform: scale(0.6);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.6);
+      }
+
       top: 24%;
       left: 6%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(1.2);
+        }
+        & {
           left: 10%;
         }
       }
     }
 
     &-2 {
-      transform: scale(0.4);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.4);
+      }
+
       top: 7%;
       left: 13%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(0.8);
         }
       }
     }
 
     &-3 {
-      transform: scale(0.35);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.35);
+      }
+
       top: 13%;
       left: 31%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(0.7);
         }
       }
     }
 
     &-4 {
-      transform: scale(0.4);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.4);
+      }
+
       top: 34%;
       left: 31%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(0.8);
+        }
+        & {
           left: 34%;
         }
       }
     }
 
     &-5 {
-      transform: scale(0.65);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.65);
+      }
+
       top: 21%;
       left: 43%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(1.3);
+        }
+        & {
           top: 21%;
           left: 43%;
         }
@@ -186,13 +231,18 @@
     }
 
     &-6 {
-      transform: scale(0.5);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.5);
+      }
+
       top: 7%;
       left: 49%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(1);
+        }
+        & {
           top: 7%;
           left: 49%;
         }
@@ -200,13 +250,18 @@
     }
 
     &-7 {
-      transform: scale(0.35);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.35);
+      }
+
       top: 25%;
       left: 60%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(0.7);
+        }
+        & {
           top: 25%;
           left: 60%;
         }
@@ -214,13 +269,18 @@
     }
 
     &-8 {
-      transform: scale(0.6);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.6);
+      }
+
       top: 25%;
       left: 75%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(1.2);
+        }
+        & {
           top: 25%;
           left: 75%;
         }
@@ -228,13 +288,18 @@
     }
 
     &-9 {
-      transform: scale(0.5);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.5);
+      }
+
       top: 40%;
       left: 67%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(1);
+        }
+        & {
           top: 47%;
           left: 67%;
         }
@@ -242,13 +307,18 @@
     }
 
     &-10 {
-      transform: scale(0.35);
+      & > .map-marks__cookie-first-p {
+        transform: scale(0.35);
+      }
+
       top: 62%;
       left: 60%;
 
       @media (min-width: 1200px) {
-        & {
+        & > .map-marks__cookie-first-p {
           transform: scale(0.7);
+        }
+        & {
           top: 65%;
           left: 63%;
         }
