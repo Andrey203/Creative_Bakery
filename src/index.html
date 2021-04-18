@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body class="page">
-    <header class="header">
+    <header id="header" class="header">
 
       <div class="burger-menu-wrapper">
         <div class="burger-menu"></div>
@@ -20,17 +20,60 @@
         <div class="burger-menu-close-line"></div>
       </div>
 
+      <div class="header__nav-wrapper">
+        <nav class="nav">
+          <div class="logo">
+            <a href="#header" class="logo__link">
+              <div class="logo__icon-first-part">
+                <div class="logo__icon-second-part"></div>
+              </div>
+              <div class="logo__text">Bakerlab</div>
+            </a>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#bakery" class="nav__link">Bakery</a>
+            </li>
+            <li class="nav__item">
+              <a href="#bakershops" class="nav__link">Bakershops</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+          <div class="nav__call-menu">
+            <a href="tel:+38 066 336 36 36" class="nav__phone-number">
+              +38 066 336 36 36
+            </a>
+            <button class="nav__call-btn">Call back</button>
+            <select
+              name="lang"
+              id="lang"
+              class="nav__lang"
+            >
+              <option value="En" class="nav__lang-item">En</option>
+              <option value="Ru" class="nav__lang-item">Ru</option>
+              <option value="Uk" class="nav__lang-item">Uk</option>
+            </select>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header__switch">
+        <div class="header__arrow-prev"></div>
+        <ul class="header__switch-list">
+          <li class="header__switch-item header__switch-item--active">01</li>
+          <li class="header__switch-item">02</li>
+          <li class="header__switch-item">03</li>
+        </ul>
+        <div class="header__arrow-next"></div>
+      </div>
+
       <div class="header__content">
         <div class="header-carousel">
-          <div class="header-carousel__switch">
-            <div class="header-carousel__arrow-prev"></div>
-            <ul class="header-carousel__switch-list">
-              <li class="header-carousel__switch-item header-carousel__switch-item--active">01</li>
-              <li class="header-carousel__switch-item">02</li>
-              <li class="header-carousel__switch-item">03</li>
-            </ul>
-            <div class="header-carousel__arrow-next"></div>
-          </div>
           <div class="header-carousel__gallery">
             <ul class="header-carousel__list">
               <li class="header-carousel__item header-carousel__item--active"></li>
@@ -46,53 +89,11 @@
         </h4>
         <button class="header__btn-more primary-btn">Learn more</button>
       </div>
-
       <aside class="header__sidebar">
-        <div class="header__nav-wrapper">
-          <nav class="nav">
-            <div class="logo">
-              <a href="#" class="logo__link">
-                <div class="logo__icon-first-part">
-                  <div class="logo__icon-second-part"></div>
-                </div>
-                <div class="logo__text">Bakerlab</div>
-              </a>
-            </div>
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="#" class="nav__link">Bakery</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Bakershops</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">About</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__link">Contacts</a>
-              </li>
-            </ul>
-            <div class="nav__call-menu">
-              <a href="tel:+38 066 336 36 36" class="nav__phone-number">
-                +38 066 336 36 36
-              </a>
-              <button class="nav__call-btn">Call back</button>
-              <select
-                name="lang"
-                id="lang"
-                class="nav__lang"
-              >
-                <option value="En" class="nav__lang-item">En</option>
-                <option value="Ru" class="nav__lang-item">Ru</option>
-                <option value="Uk" class="nav__lang-item">Uk</option>
-              </select>
-            </div>
-          </nav>
-        </div>
       </aside>
 
     </header>
-    <section class="bakery page__container">
+    <section id="bakery" class="bakery page__container">
       <h2 class="section-title">Bakery</h2>
 
       <div class="product-cards">
@@ -189,7 +190,7 @@
       </div>
 
     </section>
-    <section class="bakershops page__container">
+    <section id="bakershops" class="bakershops page__container">
       <h2 class="bakershops__title section-title">Bakershops</h2>
       <form
         action="#"
@@ -329,7 +330,7 @@
         <button class="bakershops__zoom-btn">+</button>
       </div>
     </section>
-    <section class="about page__container">
+    <section id="about" class="about page__container">
       <h2 class="about__title section-title">About</h2>
       <p class="about__text">
         Bakerlab is a bakery network in Ukraine, specialising in creating unique pastry using unconventional recepies.
@@ -383,8 +384,155 @@
         </div>
       </div>
     </section>
-    <section class="contacts"></section>
-    <footer class="footer"></footer>
+    <section id="contacts" class="contacts">
+      <h2 class="contacts__title section-title">Contacts</h2>
+      <div class="contacts__contact-block">
+        <div class="contacts__get-touch">
+          <h4 class="contacts__get-touch-title">Get in touch</h4>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              Bakerlab Head Office<br>
+              <a
+                href="https://goo.gl/maps/TKPZk9XHvVBKd6716"
+                class="contacts__link">
+                Ukraine, Kyiv, Holosiivska St, 53
+              </a>
+            </li>
+            <li class="contacts__item">
+              Support 24/7<br>
+              <a
+                href="tel:+38 066 336 36 36"
+                class="contacts__link">
+                +38 066 336 36 36
+              </a>
+            </li>
+            <li class="contacts__item">
+              Support<br>
+              <a
+                href="mailto:info@bakerlab.com"
+                class="contacts__link">
+                info@bakerlab.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              Cooperation<br>
+              <a
+                href="mailto:max.yovenko@bakerlab.com"
+                class="contacts__link">
+                max.yovenko@bakerlab.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              PR Manager<br>
+              <a
+                href="mailto:ihor.lukash@bakerlab.com"
+                class="contacts__link">
+                ihor.lukash@bakerlab.com
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.921560438797!2d24.024621915229556!3d49.862718079398576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add25ffe9e083%3A0x15455ad1a4dbab26!2z0J_QtdC60LDRgNC90Y8gQmFrZXIgc2hvcA!5e0!3m2!1sru!2sua!4v1618648950822!5m2!1sru!2sua"
+            width="100%"
+            height="100%"
+            class="contacts__map-iframe"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div class="contacts__feetback">
+        <form
+          action="#"
+          method="POST"
+          class="feedback-form">
+          <h4 class="feedback-form__title">We’d love to hear your feedback</h4>
+          <input
+            name="feedbackName"
+            type="text"
+            class="feedback-form__name"
+            placeholder="Name*"
+            required>
+          <input
+            name="feedbackEmail"
+            type="email"
+            class="feedback-form__email"
+            placeholder="E-mail*"
+            required>
+          <input
+            name="feedbackPhone"
+            type="tel"
+            class="feedback-form__tel"
+            placeholder="Phone*"
+            required>
+          <textarea
+            name="feedbackMessage"
+            id="feedback-message"
+            cols="30"
+            rows="10"
+            class="feedback-form__message"
+            required>Message*
+          </textarea>
+          <input
+            type="submit"
+            class="feedback-form__submit primary-btn"
+            value="Send">
+        </form>
+        <div class="contacts__feedback-img"></div>
+      </div>
+    </section>
+    <footer class="footer page__container">
+      <div class="footer-nav">
+        <div class="footer-logo">
+          <a href="#header" class="footer-logo__link">
+            <div class="footer-logo__icon-first-part">
+              <div class="footer-logo__icon-second-part"></div>
+            </div>
+            <div class="footer-logo__text">Bakerlab</div>
+          </a>
+        </div>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="#bakery" class="footer-nav__link">Bakery</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#bakershops" class="footer-nav__link">Bakershops</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#about" class="footer-nav__link">About</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#contacts" class="footer-nav__link">Contacts</a>
+          </li>
+        </ul>
+        <div class="soc-icons">
+          <a href="https://twitter.com/" class="soc-icons__link">
+            <img
+              src="images/icons/twitter.svg"
+              alt="twitter icon"
+              class="soc-icons__icon">
+          </a>
+          <a href="https://uk-ua.facebook.com/" class="soc-icons__link">
+            <img
+              src="images/icons/facebook.svg"
+              alt="facebook icon"
+              class="soc-icons__icon">
+          </a>
+          <a href="https://www.linkedin.com/" class="soc-icons__link">
+            <img
+              src="images/icons/linkedin.svg"
+              alt="linkedin icon"
+              class="soc-icons__icon">
+          </a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span class="copyright__years">&copy; 2015–2020</span>
+        <a href="#" class="copyright__link">Privacy — Terms</a>
+      </div>
+    </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

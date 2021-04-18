@@ -1,0 +1,155 @@
+.contacts {
+  &__contact-block {
+    background-color: #e39a3b;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media (min-width: $screenWidth) {
+      padding-left: 59px;
+      padding-right: 59px;
+    }
+
+    @media (min-width: 1600px) {
+      padding-left: rubberPadding(1600px);
+      padding-right: rubberPadding(1600px);
+    }
+  }
+
+  &__map-iframe {
+    border: none;
+  }
+
+  &__feetback {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 60px;
+    align-items: center;
+    justify-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 50px;
+
+    @media (min-width: 672px) {
+      padding-left: 59px;
+      padding-right: 59px;
+      padding-bottom: 135px;
+    }
+
+    @media (min-width: 1600px) {
+      padding-left: rubberPadding(1600px);
+      padding-right: rubberPadding(1600px);
+    }
+  }
+
+  &__get-touch {
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    @media (min-width: 612px) {
+      padding-top: 40px;
+    }
+
+    &-title {
+      text-align: center;
+    }
+  }
+
+  &__map {
+    min-height: 600px;
+  }
+
+  &__list {
+    position: relative;
+    list-style: none;
+    padding-left: 54px;
+
+    & > :first-child::before {
+      content: url("../images/icons/pin.svg");
+      position: absolute;
+      left: 5px;
+    }
+
+    & > :nth-child(2)::before {
+      content: url("../images/icons/phone.svg");
+      position: absolute;
+      left: 5px;
+    }
+
+    & > :nth-child(3)::before {
+      content: url("../images/icons/mail.svg");
+      position: absolute;
+      left: 5px;
+    }
+  }
+
+  &__item::first-line {
+    font-weight: 700;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #412d22;
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: -100px;
+
+    @media (min-width: 612px) {
+      margin-bottom: 26px;
+      color: #e39a3b;
+    }
+  }
+
+  &__feedback-img {
+    @include size(205px, 100%);
+    max-height: 417px;
+    max-width: 509px;
+    margin: 0 auto;
+    background-image: url("../images/contacts/feedback-img.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media (min-width: 672px) {
+      @include size(417px, 100%);
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+  }
+}
+
+.feedback-form {
+  max-width: 378px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__name,
+  &__email,
+  &__tel,
+  &__message {
+    border: none;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #412d22;
+    margin-top: 20px;
+    background-color: transparent;
+  }
+
+  &__message {
+    resize: none;
+    color: #412d22aa;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__submit {
+    @include size(40px, 160px);
+    display: block;
+    margin: 30px auto 0;
+  }
+}

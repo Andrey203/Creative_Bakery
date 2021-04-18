@@ -5,11 +5,13 @@
   @include size(100%, 60%);
   padding: 33px 16px 30px;
   background-color: #e39a3b;
+  z-index: 1;
   transition: 0.3s ease-in-out;
 
   @media (min-width: $screenWidth) {
     & {
-      position: static;
+      position: relative;
+      top: 0;
       @include size(100%, calc(59px + #{$screenContentWidth} * 0.3));
       padding: 34px 59px 0 0;
     }
@@ -17,7 +19,7 @@
 
   @media (min-width: 1600px) {
     & {
-      @include size(100%, calc(59px + #{$screenContentWidth} * 0.3));
+      @include size(100%, #{$largeScreenSidebarWidth});
       padding: 34px rubberPadding(1600px) 0 0;
     }
   }

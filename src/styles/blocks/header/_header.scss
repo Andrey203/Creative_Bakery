@@ -2,6 +2,113 @@
   position: relative;
   display: flex;
   height: 100vh;
+
+  &__arrow-prev {
+    @include size(20px, 12px);
+    cursor: pointer;
+    background-image: url("../images/icons/arrow-left.svg");
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    @media (min-width: $screenWidth) {
+      & {
+        @include size(15px, 26px);
+        background-image: url("../images/icons/arrow-up.svg");
+      }
+    }
+  }
+
+  &__arrow-next {
+    @include size(20px, 12px);
+    cursor: pointer;
+    background-image: url("../images/icons/arrow-right.svg");
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    @media (min-width: $screenWidth) {
+      & {
+        @include size(15px, 26px);
+        background-image: url("../images/icons/arrow-down.svg");
+      }
+    }
+  }
+
+  &__switch {
+    position: absolute;
+    left: calc(50% - 179px / 2);
+    bottom: 26px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    z-index: 1;
+
+    &-item {
+      line-height: 19px;
+      color: #e39a3b;
+    }
+
+    &-item--active {
+      font-size: 40px;
+      line-height: 47px;
+      color: #412d22;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    @media (min-width: $screenWidth) {
+      & {
+        width: 187px;
+        left: calc(59px + #{$screenContentWidth} - 187px);
+        right: auto;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        grid-template-columns: auto;
+        justify-items: end;
+        z-index: 2;
+      }
+
+      &-item {
+        font-size: 40px;
+        line-height: 47px;
+        color: #f1cc9d;
+      }
+
+      &-item--active {
+        font-size: 176px;
+        line-height: 209px;
+        color: #412d22;
+      }
+
+      &-list {
+        grid-template-columns: auto;
+        justify-items: end;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      & {
+        left: auto;
+        right: #{rubberPadding(1600px)};
+      }
+    }
+  }
 }
 
 .burger-menu-wrapper {
@@ -10,7 +117,7 @@
   position: fixed;
   top: 33px;
   right: 16px;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
@@ -85,18 +192,6 @@
   }
 
   &__text {
-    position: relative;
-    top: -12px;
-    left: 21px;
-    font-family: "Cookie", cursive;
-    font-size: 23px;
-    line-height: 26px;
-
-    @media (min-width: $screenWidth) {
-      top: -16px;
-      left: 29px;
-      font-size: 30px;
-      line-height: 33px;
-    }
+    @extend %cookieText;
   }
 }

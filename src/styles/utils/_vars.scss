@@ -4,3 +4,6 @@ $iPadWidth: 540px;
 $iPhoneContentWidth: calc(100vw - 32px);
 $screenContentWidth: calc(100vw - 118px);
 $largeScreenContentWidth: calc(100vw - #{rubberPadding(1600px)} * 2);
+
+$largeScreenSidebarWidth: calc(#{rubberPadding(1600px)} + 480px);
+$largeScreenContentWidth: calc(#{rubberPadding(1600px)} + 1120px);

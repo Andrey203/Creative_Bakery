@@ -2,7 +2,6 @@
   position: relative;
   @include size(100%, 100%);
   padding: 15px 16px 26px;
-  background-image: url("../images/header/bake-cream-puff-cup-1775045.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -13,7 +12,7 @@
   }
 
   @media (min-width: 1600px) {
-    @include size(100%, calc(59px + #{$largeScreenContentWidth} * 0.7));
+    @include size(100%, #{$largeScreenContentWidth});
     padding: 34px 0 0 rubberPadding(1600px);
   }
 }

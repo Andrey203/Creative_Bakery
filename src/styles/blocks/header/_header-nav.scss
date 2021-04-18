@@ -1,5 +1,17 @@
 .header__nav-wrapper {
   height: 100%;
+  position: fixed;
+  z-index: 2;
+  left: calc(#{$iPhoneContentWidth} - 40%);
+  top: -100%;
+  transition: 0.3s ease-in-out;
+
+  @media (min-width: $screenWidth) {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 }
 
 .nav {
@@ -12,7 +24,7 @@
     & {
       height: 87px;
       display: flex;
-      position: fixed;
+      position: absolute;
       left: 59px;
       right: 59px;
       top: 34px;
@@ -53,6 +65,7 @@
   }
 
   &__call-menu {
+    margin-bottom: 20%;
     display: grid;
     gap: 30px;
 
@@ -86,6 +99,13 @@
   &__phone-number {
     text-decoration: none;
     color: #412d22;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #000;
+      transform-origin: top;
+      transform: scale(1.05);
+    }
   }
 
   &__call-btn {
@@ -95,6 +115,7 @@
     outline: none;
     border-radius: 40px;
     background-color: #f1cc9d;
+    transition: 0.3s ease-in-out;
 
     &:hover {
       border: 2px solid #f1cc9d;
