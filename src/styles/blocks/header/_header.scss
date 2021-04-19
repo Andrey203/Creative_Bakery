@@ -47,7 +47,7 @@
     grid-template-columns: auto auto auto;
     gap: 15px;
     justify-items: center;
-    align-items: center;
+    align-items: baseline;
     z-index: 1;
 
     &-item {
@@ -69,7 +69,7 @@
       grid-template-columns: auto auto auto;
       gap: 20px;
       justify-items: center;
-      align-items: center;
+      align-items: baseline;
     }
 
     @media (min-width: $screenWidth) {

@@ -20,8 +20,22 @@
   &__title {
     color: #e39a3b;
 
+    @media (min-width: 500px) and (max-width: $screenWidth) {
+      font-size: 3em;
+    }
+
     @media (min-width: $screenWidth) {
       margin-top: 0;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: $screenWidth) {
+    &__name {
+      font-size: 2em;
+    }
+    
+    &__description {
+      font-size: 1.4em;
     }
   }
 
@@ -61,6 +75,10 @@
   &__img {
     @include size(200px, 300px);
     object-fit: contain;
+
+    @media (min-width: 500px) {
+      @include size(300px, 450px);
+    }
 
     @media (min-width: $screenWidth) {
       & {
