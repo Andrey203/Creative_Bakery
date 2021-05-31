@@ -111,6 +111,10 @@
   }
 }
 
+.show.show {
+  top: 0;
+}
+
 .burger-menu-wrapper {
   @include size(18px, 24px);
   overflow: hidden;
@@ -126,6 +130,22 @@
       display: none;
     }
   }
+}
+
+.burger-hide.burger-hide {
+  transform: translate(30px);
+}
+
+.line-hide.line-hide {
+  transform: translate(-30px);
+}
+
+.close-show.close-show {
+  transform: rotate(45deg) translate(0);
+}
+
+.close-line-show.close-line-show {
+  transform: rotate(-45deg) translate(0);
 }
 
 .burger-menu {
