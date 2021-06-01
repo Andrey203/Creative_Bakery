@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Creative Bakery</title>
+    <link
+      rel="shortcut icon"
+      href="./images/icons/cookie-1.svg"
+      type="image/png"
+    >
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -222,6 +227,7 @@
           <option value="">Kyiv</option>
         </select>
         <select
+          onchange="window.location.href=this.options[this.selectedIndex].value"
           name="bakershop-address"
           id="bakershop-address"
           class="bakershops__select"
@@ -234,7 +240,22 @@
           >
             Address
           </option>
-          <option value="">www.com</option>
+          <option
+            value="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&t=m&oe=UTF8&msa=0&mid=1WPoO4OmEc5Q144BHBVNXN_y-nK0&ll=50.44368500000001%2C30.519284000000013&z=17">
+              Kreshchatik Str., 44,
+          </option>
+          <option
+            value="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&t=m&oe=UTF8&msa=0&mid=1WPoO4OmEc5Q144BHBVNXN_y-nK0&ll=50.44368500000001%2C30.519284000000013&z=17">
+              Kreshchatik Str., 45,
+          </option>
+          <option
+            value="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&t=m&oe=UTF8&msa=0&mid=1WPoO4OmEc5Q144BHBVNXN_y-nK0&ll=50.44368500000001%2C30.519284000000013&z=17">
+              Kreshchatik Str., 46,
+          </option>
+          <option
+            value="https://www.google.com/maps/d/u/0/viewer?ie=UTF8&t=m&oe=UTF8&msa=0&mid=1WPoO4OmEc5Q144BHBVNXN_y-nK0&ll=50.44368500000001%2C30.519284000000013&z=17">
+              Kreshchatik Str., 47,
+          </option>
         </select>
         <input
           type="submit"
